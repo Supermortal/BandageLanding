@@ -1,0 +1,234 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Frisson</title>
+    <meta name="description" content="HTML framework description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic,cyrillic-ext,latin-ext">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis&amp;subset=latin,latin-ext">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek,vietnamese,latin-ext,cyrillic">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Abel">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/calendo-theme")
+    @Styles.Render("~/Content/cleditor/bundle")
+    @Styles.Render("~/Content/jqueryui-custom/bundle")
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+    @RenderSection("styles", required: false)
+</head>
+<body class="home-page gradient">
+
+    <div class="top-bar">
+        <div class="container cf">
+            <!-- End  account -->
+            <!--<a href="#" class="shopping-cart">Shopping Cart</a>
+            <!-- End shopping cart
+            <form name="search" action="#" method="get" class="search">
+                <input type="text" placeholder="Search..." class="search__field">
+                <button type="submit" class="search__btn">
+                    <i class="search__icon"></i>
+                </button>
+            </form> -->
+            <!-- End search -->
+            @Html.Partial("_LoginPartial")
+        </div>
+        <!-- End container -->
+    </div>
+    <!-- End top bar -->
+    <header class="header">
+        <div class="container">
+            <a href="@Url.Action("Index", "Admin")" class="logo" style="font-size: 3em; color: orange;">
+                @*<img src="http://placehold.it/209x38" alt="Calendo">*@
+                Frisson
+            </a>
+            <!-- End logo -->
+            <nav class="nav">
+
+            </nav>
+            <!-- End nav -->
+        </div>
+        <!-- End container -->
+    </header>
+    <!-- End header -->
+    <section class="popular">
+        @RenderBody()
+    </section>
+    <!-- End popular -->
+    <footer class="footer">
+        <div class="top-section">
+            <div class="container cf">
+                <div class="brands">
+                    <a href="#" target="_blank" class="brand brand_facebook">Facebook</a>
+                    <a href="#" target="_blank" class="brand brand_flickr">Flickr</a>
+                    <a href="#" target="_blank" class="brand brand_twitter">Twitter</a>
+                    <a href="#" target="_blank" class="brand brand_vimeo">Vimeo</a>
+                    <a href="#" target="_blank" class="brand brand_beatport">Beatport</a>
+                </div>
+                <!-- End brands -->
+                <div class="contacts">
+                    <div class="contacts__col">
+                        <i class="contacts__icon contacts__icon_phone"></i>
+                        <a href="tel:+18016869690">(801) 686-9690</a>
+                    </div>
+                    <div class="contacts__col">
+                        <i class="contacts__icon contacts__icon_email"></i>
+                        <a href="mailto:frisson@frisson.namespacemedia.com">frisson@frisson.namespacemedia.com</a>
+                    </div>
+                    <div class="contacts__col">
+                        <i class="contacts__icon contacts__icon_address"></i>
+                        Salt Lake City, UT
+                    </div>
+                </div>
+                <!-- End contacts -->
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End top section -->
+        <div class="middle-section">
+            <div class="container cf">
+                <section class="left-col">
+                    <h1 class="second-title secondTitle_tweets">Latest tweets</h1>
+                    <div class="tweets">
+                        @*<article class="tweet">
+                                <span class="tweet__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                <span class="tweet__user">@@Calendo</span>
+                                <span class="tweet__time">2 hours ago</span>
+                            </article>
+                            <!-- End tweet -->
+                            <article class="tweet">
+                                <span class="tweet__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                <span class="tweet__user">@@Calendo</span>
+                                <span class="tweet__time">2 hours ago</span>
+                            </article>*@
+                        <!-- End tweet -->
+                    </div>
+                    <!-- End tweets -->
+                </section>
+                <!-- End left col -->
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End middle section -->
+        <div class="bottom-section">
+            <div class="container cf">
+                @*<nav class="second-nav">
+                        @Html.ActionLink("Upload", "Upload", "Audio", new { }, new { @class = "second-nav__item" })
+                        @Html.ActionLink("Play", "Play", "Audio", new { }, new { @class = "second-nav__item" })
+                        @Html.ActionLink("Front Page", "FrontPage", "Home", new { }, new { @class = "second-nav__item" })
+                    </nav>*@
+                <!-- End second nav -->
+                <div class="copy">&copy; @(DateTime.Now.Year) All rights reserved. <span>Frisson Entertainment</span></div>
+                <!-- End copy -->
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End bottom section -->
+    </footer>
+    <!-- End footer -->
+    <!--<script src="js/libs/jquery.bxslider.min.js"></script>
+    <script src="js/libs/jquery.magnific-popup.min.js"></script>
+    <script src="js/libs/jquery.fitvids.js"></script>
+    <script src="js/libs/jquery.jplayer.min.js"></script>
+    <!-- End libs
+
+    <script src="js/scripts.js"></script>-->
+    <!-- End custom -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui-custom")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/global")
+    @*@Scripts.Render("~/bundles/jPlayer")*@
+    @Scripts.Render("~/bundles/calendo-theme")
+    <script>
+        $(document).ready(function () {
+            //$("#jquery_jplayer_14").jPlayer({
+            //    ready: function () {
+            //        $(this).jPlayer("setMedia", {
+            //            title: "LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock",
+            //            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+            //            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            //        });
+            //    },
+            //    swfPath: "/js",
+            //    supplied: "m4a, oga",
+            //    cssSelectorAncestor: '#jp_container_14'
+            //});
+            ///* End player 14 */
+
+            //$("#jquery_jplayer_15").jPlayer({
+            //    ready: function () {
+            //        $(this).jPlayer("setMedia", {
+            //            title: "LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock",
+            //            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+            //            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            //        });
+            //    },
+            //    swfPath: "/js",
+            //    supplied: "m4a, oga",
+            //    cssSelectorAncestor: '#jp_container_15'
+            //});
+            ///* End player 15 */
+
+            //$("#jquery_jplayer_16").jPlayer({
+            //    ready: function () {
+            //        $(this).jPlayer("setMedia", {
+            //            title: "LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock",
+            //            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+            //            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            //        });
+            //    },
+            //    swfPath: "/js",
+            //    supplied: "m4a, oga",
+            //    cssSelectorAncestor: '#jp_container_16'
+            //});
+            ///* End player 16 */
+
+            //$("#jquery_jplayer_17").jPlayer({
+            //    ready: function () {
+            //        $(this).jPlayer("setMedia", {
+            //            title: "LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock",
+            //            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+            //            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            //        });
+            //    },
+            //    swfPath: "/js",
+            //    supplied: "m4a, oga",
+            //    cssSelectorAncestor: '#jp_container_17'
+            //});
+            ///* End player 17 */
+
+            //$("#jquery_jplayer_18").jPlayer({
+            //    ready: function () {
+            //        $(this).jPlayer("setMedia", {
+            //            title: "LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock",
+            //            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+            //            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            //        });
+            //    },
+            //    swfPath: "/js",
+            //    supplied: "m4a, oga",
+            //    cssSelectorAncestor: '#jp_container_18'
+            //});
+            ///* End player 18 */
+        });
+    </script>
+    @Scripts.Render("~/bundles/cleditor")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

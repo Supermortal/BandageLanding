@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "About Frisson";
+}
+
+@section styles {
+    @Styles.Render("~/Content/home/bundle")
+}
+
+<h2 style="margin-top: 50px;" class="centered margin-bottom-10">About Frisson</h2>
+
+<div style="height: 1900px;" class="about-content">
+    <p>Hi,</p>
+
+    <br/>
+    <br/>
+
+    <p>You might wonder why I would set about making a music sharing site when sites like Soundcloud and Bandcamp, and even YouTube, exist. I personally use those sites, and I think they’re great at what they do, but I still think something is missing.</p>
+    <p><strong>Those sites aren’t geared towards helping you grow your audience.</strong>
+    </p>
+    <p>YouTube probably comes the closest, but its focus is on videos, and videos of all types at that. Soundcloud takes a social media and grass roots approach. It works if you already have a decent fan base. Bandcamp features the most played, and the already-famous musicians.</p>
+    <p><strong>None of these features help you, the struggling artist.</strong>
+    </p>
+    <p>With the internet as it is today, most people find themselves living their lives mostly online. Why shouldn’t there be a new solution that takes advantage of that fact?</p>
+    <p><strong>Sign up below for more information</strong>, and you will have the chance to be in the coming beta, and more importantly, you will get to help me build the site, with the features you care about.</p>
+
+    <br/>
+
+    <p>Proposed features include:</p>
+    <ul class="about-list">
+        <li><strong>- Live video casting</strong></li>
+        <li><strong>- Audio uploads and merchandise sells</strong></li>
+        <li><strong>- Predictive discovery of new music for fans</strong></li>
+    </ul>
+
+    <div style="margin-top: 40px; position: relative; left: -45px;">
+        @{ Html.RenderAction("LeadForm", "Home"); }
+    </div>
+</div>
+
+
+

@@ -1,0 +1,6 @@
+[submodule "Supermortal.Common.PCL"]
+	path = Supermortal.Common.PCL
+	url = https://github.com/Supermortal/Supermortal.Common.PCL.git
+[submodule "Supermortal.Common.Web"]
+	path = Supermortal.Common.Web
+	url = https://github.com/Supermortal/Supermortal.Common.Web.git

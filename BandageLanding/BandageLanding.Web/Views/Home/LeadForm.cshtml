@@ -1,0 +1,20 @@
+﻿@model BandageLanding.Infrastructure.Models.Lead
+
+@section styles {
+    @Styles.Render("~/Content/home/bundle")
+}
+
+@using (Html.BeginForm())
+{
+    <div class="centered leadform-wrapper">
+        <h2>Sign up for more information</h2>
+        <table class="leadform-table">
+            <tr>
+                <td>Email: </td>
+                <td>@Html.TextBoxFor(i => i.EmailAddress)<span>@Html.ValidationMessageFor(i => i.EmailAddress)</span></td>
+            </tr>
+        </table>
+
+        <input id="leadFormSubmit" type="submit" value="Submit"/>
+    </div>
+}

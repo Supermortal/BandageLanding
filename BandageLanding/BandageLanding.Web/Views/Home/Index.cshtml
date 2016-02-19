@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "Frisson";
+}
+
+@if (ViewBag.ShowContactForm)
+{
+    <div style="display: none; margin-bottom: 15px;" id="leadFormWrapper">
+        @{ Html.RenderAction("LeadForm", "Home"); }
+    </div>
+}
+
+<div class="banner">
+    <div id="rev_slider_35_1" class="rev_slider fullwidthabanner">
+        <ul>
+            <li data-transition="3dcurtain-vertical" data-slotamount="7" data-masterspeed="500" data-saveperformance="off">
+                <img src="~/images/banner-blank.jpg" alt="Image">
+                <div class="tp-caption lfb ltt tp-resizeme"
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="-60"
+                     data-speed="600"
+                     data-start="800"
+                     data-easing="Power4.easeOut"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-elementdelay="0.01"
+                     data-endelementdelay="0.1"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn">
+                    <h2 class="text">
+                        <span>Connect</span>
+
+                        Connect With Your
+                        <br />
+                        Favorite Musicians
+                        <br />
+                        <br />
+                        - Feedback From Fans
+                        <br />
+                        And Musicians
+                        <br />
+                        - Music Sharing
+                        <br />
+                        - Merchandise Sells
+                        <br />
+                    </h2>
+                </div>
+                <div class="tp-caption lfb ltt tp-resizeme"
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="100"
+                     data-speed="600"
+                     data-start="900"
+                     data-easing="Power4.easeOut"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-elementdelay="0.01"
+                     data-endelementdelay="0.1"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn">
+                    <img src="~/images/signature-blank.png" alt="Image">
+                </div>
+            </li>
+            <li data-transition="3dcurtain-vertical" data-slotamount="7" data-masterspeed="500" data-saveperformance="off">
+                <img src="~/images/banner-blank.jpg" alt="Image">
+                <div class="tp-caption lfb ltt tp-resizeme"
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="-60"
+                     data-speed="600"
+                     data-start="800"
+                     data-easing="Power4.easeOut"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-elementdelay="0.01"
+                     data-endelementdelay="0.1"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn">
+                    <h2 class="text">
+                        <span>Grow</span>
+                        Grow Your Audience
+                        <br />
+                        <br />
+                        - Local Connection
+                        <br />
+                        - Moods And Genres
+                        <br />
+                        - Predictive Sharing
+                        <br />
+                    </h2>
+                </div>
+                <div class="tp-caption lfb ltt tp-resizeme"
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="100"
+                     data-speed="600"
+                     data-start="900"
+                     data-easing="Power4.easeOut"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-elementdelay="0.01"
+                     data-endelementdelay="0.1"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn">
+                    <img src="~/images/signature-blank.png" alt="Image">
+                </div>
+            </li>
+            <li data-transition="3dcurtain-vertical" data-slotamount="7" data-masterspeed="500" data-saveperformance="off">
+                <img src="~/images/banner-blank.jpg" alt="Image">
+                <div class="tp-caption lfb ltt tp-resizeme"
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="-60"
+                     data-speed="600"
+                     data-start="800"
+                     data-easing="Power4.easeOut"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-elementdelay="0.01"
+                     data-endelementdelay="0.1"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn">
+                    <h2 class="text">
+                        <span>Broadcast</span>Broadcast Yourself
+                        <br />
+                        To The World
+                        <br />
+                        <br />
+                        - Video
+                        <br />
+                        - Audio
+                        <br />
+                        - Chat
+                        <br />
+                    </h2>
+                </div>
+                <div class="tp-caption lfb ltt tp-resizeme"
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="100"
+                     data-speed="600"
+                     data-start="900"
+                     data-easing="Power4.easeOut"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-elementdelay="0.01"
+                     data-endelementdelay="0.1"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn">
+                    <img src="~/images/signature-blank.png" alt="Image">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- end rev_slider -->
+</div>
+<!-- end banner -->
+
+@section scripts {
+    <script type="text/javascript">
+        jQuery(function () {
+            setTimeout(function () {
+                jQuery("#leadFormWrapper").slideDown("slow", function () {
+                    // Animation complete.
+                });
+            }, 1000);
+        });
+    </script>
+}
